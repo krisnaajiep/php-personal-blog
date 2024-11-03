@@ -17,6 +17,8 @@ class Article
     $i = count($files);
     if (in_array($i, $existIndex)) $i++;
 
+    if (!file_exists($this->dir)) mkdir($this->dir);
+
     file_put_contents($this->dir . $i . '.json', json_encode($validated, JSON_PRETTY_PRINT));
 
     Flasher::setFlash('New article has been ', 'added.', 'success');
