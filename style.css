@@ -1,0 +1,141 @@
+main {
+  border: 3px solid black;
+  margin: 10px auto 25px;
+  width: 40vw;
+  min-height: 85vh;
+  border-radius: 10px;
+}
+
+header {
+  width: 40vw;
+  margin: 25px auto 0;
+}
+
+header h3 {
+  margin: 0;
+}
+
+header h3.url {
+  display: inline;
+}
+
+header h3.nav {
+  float: right;
+}
+
+h1,
+section,
+form {
+  margin: 20px;
+}
+
+h2 {
+  display: inline-block;
+  margin: 6px 0;
+}
+
+h2 a,
+h3.add a,
+h3.nav a {
+  color: black;
+  text-decoration: none;
+}
+
+h2 a:hover,
+h3.add a:hover,
+h3.crud a:hover,
+h3.nav a:hover,
+button.logout:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+h3.date,
+h3.crud {
+  float: right;
+  margin: 10px 0 0;
+  color: gray;
+}
+
+h3.article-date {
+  color: gray;
+}
+
+article {
+  font-size: large;
+  font-weight: bold;
+}
+
+.main-header h1 {
+  margin: 20px 20px 0;
+}
+
+h3.add {
+  margin: 30px 20px 0;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3.crud a {
+  color: gray;
+  text-decoration: none;
+}
+
+h3.crud a:last-child {
+  margin-left: 15px;
+}
+
+.form-input input,
+.form-input textarea {
+  margin: 5px 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-input input {
+  height: 40px;
+  width: 100%;
+}
+
+.form-input textarea {
+  width: 506px;
+  color: gray;
+}
+
+form button {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p.error {
+  color: red;
+  margin: 0 0 10px 5px;
+}
+
+p.success {
+  color: green;
+  margin-bottom: 0;
+}
+
+button.logout {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+  padding: 0;
+}
+
+form.logout {
+  display: inline;
+  float: right;
+  margin: 0;
+}
