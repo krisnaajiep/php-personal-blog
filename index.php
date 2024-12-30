@@ -1,14 +1,14 @@
-<?php
+<?php include 'includes/head.php' ?>
 
-include 'includes/head.php';
-include 'includes/header.php';
-
-?>
+<!-- Header Section -->
+<header>
+  <h1>Personal Blog</h1>
+</header>
 
 <!-- Main Section -->
 <main>
   <article>
-    <h3 class="title"><a href="#">My first article</a></h3>
+    <h3 class="title"><a href="article.php">My first article</a></h3>
     <h3 class="date">August 7, 2024</h3>
   </article>
   <article>
