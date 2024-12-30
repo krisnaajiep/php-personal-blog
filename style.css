@@ -1,0 +1,28 @@
+header, main {
+  width: 50vw;
+  margin: auto;
+}
+
+article {
+  border-bottom: 1px solid lightgrey;
+}
+
+article h3 {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+article h3.date {
+  float: right;
+  color: gray;
+} 
+
+article h3.title a {
+  color: black;
+  text-decoration: none;
+}
+
+article h3.title a:hover {
+  color: blue;
+  text-decoration: underline;
+}
