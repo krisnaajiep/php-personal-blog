@@ -26,3 +26,17 @@ article h3.title a:hover {
   color: blue;
   text-decoration: underline;
 }
+
+header h3 {
+  color: gray;
+}
+
+main a.back {
+  color: blue;
+  text-decoration: none;
+}
+
+main a.back:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
