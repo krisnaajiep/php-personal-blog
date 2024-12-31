@@ -1,4 +1,12 @@
-<?php include 'includes/head.php' ?>
+<?php
+
+include 'includes/head.php';
+
+if (!isset($_GET['id'])) {
+  header('Location: index.php');
+}
+
+?>
 
 <!-- Header Section -->
 <header>
