@@ -57,3 +57,29 @@ header a:hover, main a:hover {
   color: darkblue;
   text-decoration: underline;
 }
+
+form {
+  margin: 20px 0;
+}
+
+input, textarea {
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+form button:hover {
+  cursor: pointer;
+}
