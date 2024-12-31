@@ -9,18 +9,24 @@
 <main>
   <article>
     <h3 class="title"><a href="article.php">My first article</a></h3>
-    <a href="#" class="edit">Edit</a>
-    <a href="#" class="delete">Delete</a>
+    <h3 class="action">
+      <a href="#" class="edit">Edit</a>
+      <a href="#" class="delete">Delete</a>
+    </h3>
   </article>
   <article>
     <h3 class="title"><a href="#">Second article</a></h3>
-    <a href="#" class="edit">Edit</a>
-    <a href="#" class="delete">Delete</a>
+    <h3 class="action">
+      <a href="#" class="edit">Edit</a>
+      <a href="#" class="delete">Delete</a>
+    </h3>
   </article>
   <article>
     <h3 class="title"><a href="#">Third article</a></h3>
-    <a href="#" class="edit">Edit</a>
-    <a href="#" class="delete">Delete</a>
+    <h3 class="action">
+      <a href="#" class="edit">Edit</a>
+      <a href="#" class="delete">Delete</a>
+    </h3>
   </article>
 </main>
 
