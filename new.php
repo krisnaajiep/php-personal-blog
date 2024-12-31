@@ -18,21 +18,21 @@ if (!is_null($_POST['publish'])) {
   <form action="" method="post">
     <div class="form-input">
       <label for="article_title">Article Title</label>
-      <input type="text" name="article_title" id="article_title" placeholder="Article Title" <?php if (Validator::hasValidationError('article_title')): ?> style="border-color: red;" <?php endif; ?>>
+      <input type="text" name="article_title" id="article_title" placeholder="Article Title" <?php if (Validator::hasValidationError('article_title')): ?> style="border-color: red;" <?php endif; ?> value="<?= $_SESSION['old_data']['article_title'] ?? ""; ?>">
       <p class="error">
         <?= Validator::getValidationError("article_title"); ?>
       </p>
     </div>
     <div class="form-input">
       <label for="publishing_date">Publishing Date</label>
-      <input type="date" name="publishing_date" id="publishing_date" <?php if (Validator::hasValidationError('publishing_date')): ?> style="border-color: red;" <?php endif; ?>>
+      <input type="date" name="publishing_date" id="publishing_date" <?php if (Validator::hasValidationError('publishing_date')): ?> style="border-color: red;" <?php endif; ?> value="<?= $_SESSION['old_data']['publishing_date'] ?? ""; ?>">
       <p class="error">
         <?= Validator::getValidationError("publishing_date"); ?>
       </p>
     </div>
     <div class="form-input">
       <label for="content">Content</label>
-      <textarea name="content" id="content" rows="10" placeholder="Content" <?php if (Validator::hasValidationError('content')): ?> style="border-color: red;" <?php endif; ?>></textarea>
+      <textarea name="content" id="content" rows="10" placeholder="Content" <?php if (Validator::hasValidationError('content')): ?> style="border-color: red;" <?php endif; ?>><?= $_SESSION['old_data']['content'] ?? ""; ?></textarea>
       <p class="error">
         <?= Validator::getValidationError("content"); ?>
       </p>

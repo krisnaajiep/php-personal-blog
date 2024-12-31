@@ -17,6 +17,7 @@ class Validator
     }
 
     if (self::hasValidationErrors()) {
+      $_SESSION['old_data'] = $data;
       header("Location: " . $_SERVER["HTTP_REFERER"]);
       exit;
     }
