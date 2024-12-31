@@ -12,7 +12,7 @@
     <article>
       <h3 class="title"><a href="article.php?id=<?= $article['id'] ?>"><?= $article['article_title'] ?></a></h3>
       <h3 class="action">
-        <a href="edit.php" class="edit">Edit</a>
+        <a href="edit.php?id=<?= $article['id'] ?>" class="edit">Edit</a>
         <a href="#" class="delete">Delete</a>
       </h3>
     </article>

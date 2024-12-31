@@ -59,4 +59,19 @@ class Article
     header('Location: index.php');
     return null;
   }
+
+  public function update(array $data)
+  {
+    $validated = Validator::setRules($data, [
+      'article_title' => ["required", "alpha_num_space", "min_length:5", "max_length:100"],
+      'publishing_date' => ["required", "date"],
+      'content' => ["required", "min_length:100", "max_length:10000"],
+    ]);
+
+    file_put_contents($this->dir . $data['id'] . '.json', json_encode($validated, JSON_PRETTY_PRINT));
+
+    Flasher::setFlash('An article has been ', 'updated.', 'success');
+
+    header('Location: admin.php');
+  }
 }
