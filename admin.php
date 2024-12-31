@@ -7,6 +7,7 @@
 
 <!-- Main Section -->
 <main>
+  <?= Flasher::getFlash(); ?>
   <article>
     <h3 class="title"><a href="article.php">My first article</a></h3>
     <h3 class="action">

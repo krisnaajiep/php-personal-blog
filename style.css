@@ -89,3 +89,7 @@ p.error {
   font-size: small;
   margin: 0 0 10px 5px;
 }
+
+p.success {
+  color: green;
+}
