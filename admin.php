@@ -8,27 +8,15 @@
 <!-- Main Section -->
 <main>
   <?= Flasher::getFlash(); ?>
-  <article>
-    <h3 class="title"><a href="article.php">My first article</a></h3>
-    <h3 class="action">
-      <a href="edit.php" class="edit">Edit</a>
-      <a href="#" class="delete">Delete</a>
-    </h3>
-  </article>
-  <article>
-    <h3 class="title"><a href="#">Second article</a></h3>
-    <h3 class="action">
-      <a href="#" class="edit">Edit</a>
-      <a href="#" class="delete">Delete</a>
-    </h3>
-  </article>
-  <article>
-    <h3 class="title"><a href="#">Third article</a></h3>
-    <h3 class="action">
-      <a href="#" class="edit">Edit</a>
-      <a href="#" class="delete">Delete</a>
-    </h3>
-  </article>
+  <?php foreach ($articles as $article): ?>
+    <article>
+      <h3 class="title"><a href="article.php?id=<?= $article['id'] ?>"><?= $article['article_title'] ?></a></h3>
+      <h3 class="action">
+        <a href="edit.php" class="edit">Edit</a>
+        <a href="#" class="delete">Delete</a>
+      </h3>
+    </article>
+  <?php endforeach; ?>
 </main>
 
 <?php include 'includes/foot.php' ?>

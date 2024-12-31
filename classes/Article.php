@@ -25,4 +25,38 @@ class Article
 
     header('Location: admin.php');
   }
+
+  public function list(): array
+  {
+    $files = glob($this->pattern);
+    $articles = [];
+
+    if (!empty($files)) {
+      foreach ($files as $file) {
+        $filename = intval(explode('.', explode('/', $file)[1])[0]);
+        $data = array_merge(['id' => $filename], json_decode(file_get_contents($file), true));
+
+        $articles[] = $data;
+      }
+    }
+
+    return $articles;
+  }
+
+  public function show(int $id): array|null
+  {
+    $files = glob($this->pattern);
+
+    if (!empty($files)) {
+      foreach ($files as $file) {
+        $filename = intval(explode('.', explode('/', $file)[1])[0]);
+        $data = array_merge(['id' => $filename], json_decode(file_get_contents($file), true));
+
+        if ($id == $filename) return $data;
+      }
+    }
+
+    header('Location: index.php');
+    return null;
+  }
 }

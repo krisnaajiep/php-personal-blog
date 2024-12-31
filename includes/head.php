@@ -7,6 +7,11 @@ require_once 'helpers/Validator.php';
 require_once 'helpers/Flasher.php';
 
 $article = new Article();
+$articles = $article->list();
+
+if (isset($_GET['id'])) {
+  $article = $article->show($_GET['id']);
+}
 
 ?>
 

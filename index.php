@@ -7,18 +7,12 @@
 
 <!-- Main Section -->
 <main>
-  <article>
-    <h3 class="title"><a href="article.php">My first article</a></h3>
-    <h3 class="date">August 7, 2024</h3>
-  </article>
-  <article>
-    <h3 class="title"><a href="#">Second article</a></h3>
-    <h3 class="date">August 4, 2024</h3>
-  </article>
-  <article>
-    <h3 class="title"><a href="#">Third article</a></h3>
-    <h3 class="date">August 1, 2024</h3>
-  </article>
+  <?php foreach ($articles as $article): ?>
+    <article>
+      <h3 class="title"><a href="article.php?id=<?= $article['id'] ?>"><?= $article['article_title'] ?></a></h3>
+      <h3 class="date"><?= date_format(date_create_from_format('Y-m-d', $article['publishing_date']), 'F d, Y'); ?></h3>
+    </article>
+  <?php endforeach; ?>
 </main>
 
 <?php include 'includes/foot.php' ?>
