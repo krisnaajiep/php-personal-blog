@@ -9,7 +9,7 @@ class Article
     $validated = Validator::setRules($data, [
       'article_title' => ["required", "alpha_num_space", "min_length:5", "max_length:100"],
       'publishing_date' => ["required", "date"],
-      'content' => ["required", "min_length:100", "max_length:10000"],
+      'content' => ["required", "max_length:10000"],
     ]);
 
     $files = glob($this->pattern);
@@ -20,6 +20,8 @@ class Article
     if (!file_exists($this->dir)) mkdir($this->dir);
 
     file_put_contents($this->dir . $i . '.json', json_encode($validated, JSON_PRETTY_PRINT));
+
+    Flasher::setFlash('New article has been ', 'added.', 'success');
 
     header('Location: admin.php');
   }
