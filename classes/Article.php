@@ -74,4 +74,16 @@ class Article
 
     header('Location: admin.php');
   }
+
+  public function delete(int $id)
+  {
+    $filename = $this->dir . $id . '.json';
+
+    if (file_exists($filename)) {
+      unlink($filename);
+      Flasher::setFlash('An article has been ', 'deleted.', 'success');
+    }
+
+    header('Location: admin.php');
+  }
 }

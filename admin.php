@@ -13,7 +13,7 @@
       <h3 class="title"><a href="article.php?id=<?= $article['id'] ?>"><?= $article['article_title'] ?></a></h3>
       <h3 class="action">
         <a href="edit.php?id=<?= $article['id'] ?>" class="edit">Edit</a>
-        <a href="#" class="delete">Delete</a>
+        <a href="delete.php?id=<?= $article['id']; ?>" class="delete" onclick="return confirm('Are you sure want to delete this article?')">Delete</a>
       </h3>
     </article>
   <?php endforeach; ?>
