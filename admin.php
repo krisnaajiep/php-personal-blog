@@ -10,7 +10,7 @@
   <article>
     <h3 class="title"><a href="article.php">My first article</a></h3>
     <h3 class="action">
-      <a href="#" class="edit">Edit</a>
+      <a href="edit.php" class="edit">Edit</a>
       <a href="#" class="delete">Delete</a>
     </h3>
   </article>
