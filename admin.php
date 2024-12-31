@@ -2,7 +2,7 @@
 
 <header>
   <h1>Personal Blog</h1>
-  <a href="#">+ Add</a>
+  <a href="new.php">+ Add</a>
 </header>
 
 <!-- Main Section -->

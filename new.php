@@ -2,7 +2,7 @@
 
 <!-- Header Section -->
 <header>
-  <h1>Update Article</h1>
+  <h1>New Article</h1>
 </header>
 
 <!-- Main Section -->
@@ -17,7 +17,7 @@
     <div class="form-input">
       <textarea name="content" id="content" rows="10" placeholder="Content"></textarea>
     </div>
-    <button type="submit" name="update">Update</button>
+    <button type="submit" name="publish">Publish</button>
   </form>
 </main>
 
