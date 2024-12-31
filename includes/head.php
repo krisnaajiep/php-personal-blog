@@ -1,6 +1,9 @@
 <?php
 
+session_start();
+
 require_once 'classes/Article.php';
+require_once 'helpers/Validator.php';
 
 $article = new Article();
 

@@ -83,3 +83,9 @@ form button {
 form button:hover {
   cursor: pointer;
 }
+
+p.error {
+  color: red;
+  font-size: small;
+  margin: 0 0 10px 5px;
+}
