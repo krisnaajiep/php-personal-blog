@@ -3,6 +3,7 @@
 <!-- Header Section -->
 <header>
   <h1>Personal Blog</h1>
+  <a href="admin.php">Admin</a>
 </header>
 
 <!-- Main Section -->
