@@ -10,7 +10,7 @@ $article = new Article();
 $articles = $article->list();
 
 if (isset($_GET['id'])) {
-  $article = $article->show($_GET['id']);
+  $data = $article->show($_GET['id']);
 }
 
 ?>
