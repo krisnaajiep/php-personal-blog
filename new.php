@@ -2,7 +2,7 @@
 
 include 'includes/head.php';
 
-if (!is_null($_POST['publish'])) {
+if (isset($_POST['publish'])) {
   $article->create($_POST);
 }
 
