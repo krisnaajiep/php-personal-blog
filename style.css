@@ -12,6 +12,20 @@ header a {
   margin-top: 15px;
 }
 
+header h3 {
+  color: gray;
+}
+
+header a, main a {
+  color: blue;
+  text-decoration: none;
+}
+
+header a:hover, main a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
 article {
   border-bottom: 1px solid lightgrey;
 }
@@ -41,20 +55,6 @@ article h3.title a {
 
 article h3.title a:hover {
   color: blue;
-  text-decoration: underline;
-}
-
-header h3 {
-  color: gray;
-}
-
-header a, main a {
-  color: blue;
-  text-decoration: none;
-}
-
-header a:hover, main a:hover {
-  color: darkblue;
   text-decoration: underline;
 }
 
