@@ -1,4 +1,12 @@
-<?php include 'includes/head.php' ?>
+<?php
+
+include 'includes/head.php';
+
+if (!is_null($_POST['publish'])) {
+  $article->create($_POST);
+}
+
+?>
 
 <!-- Header Section -->
 <header>

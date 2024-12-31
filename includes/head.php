@@ -1,3 +1,11 @@
+<?php
+
+require_once 'classes/Article.php';
+
+$article = new Article();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
