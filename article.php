@@ -18,5 +18,7 @@ if (!isset($_GET['id'])) {
 <main>
   <p><?= $data['content'] ?></p>
 
-  <a href="index.php" class="back">Go back</a>
+  <?php if (!is_null($_SERVER['HTTP_REFERER'])): ?>
+    <a href="<?= $_SERVER['HTTP_REFERER'] ?>" class="back">Go back</a>
+  <?php endif; ?>
 </main>
