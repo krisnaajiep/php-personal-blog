@@ -1,9 +1,27 @@
 <?php
 
+/**
+ * Class Article
+ * 
+ * This class handles CRUD operations for managing articles stored as JSON files.
+ */
 class Article
 {
+  /**
+   * @var string $dir The directory where article JSON files are stored.
+   * @var string $pattern The pattern to match article files in the directory.
+   */
   private $dir = 'articles/', $pattern = 'articles/*.json';
 
+  /**
+   * Create a new article
+   *
+   * @param array $data The input data for the article.
+   * - Validates input data against predefined rules.
+   * - Saves the validated data as a JSON file in the articles directory.
+   * - Sets a success flash message and redirects to the admin page.
+   * @return void
+   */
   public function create(array $data)
   {
     $validated = Validator::setRules($data, [
@@ -26,6 +44,13 @@ class Article
     header('Location: admin.php');
   }
 
+  /**
+   * Retrieve a list of all articles.
+   *
+   * @return array An array of articles with their content and metadata.
+   * - Reads all JSON files in the articles directory.
+   * - Parses the content and appends article IDs to the data.
+   */
   public function list(): array
   {
     $files = glob($this->pattern);
@@ -43,6 +68,12 @@ class Article
     return $articles;
   }
 
+  /**
+   * Show a single article by its filename as ID.
+   *
+   * @param integer $id The filename as ID of the article to fetch.
+   * @return array|null The article data if found, or redirects to the home page.
+   */
   public function show(int $id): array|null
   {
     $files = glob($this->pattern);
@@ -60,6 +91,15 @@ class Article
     return null;
   }
 
+  /**
+   * Update an existing article.
+   *
+   * @param array $data The updated data for the article, including its filename as ID.
+   * - Validates the input data against predefined rules.
+   * - Overwrites the existing JSON file with the updated data.
+   * - Sets a success flash message and redirects to the admin page.
+   * @return void
+   */
   public function update(array $data)
   {
     $validated = Validator::setRules($data, [
@@ -75,6 +115,14 @@ class Article
     header('Location: admin.php');
   }
 
+  /**
+   * Delete an article by its filename as ID.
+   *
+   * @param integer $id The filename ID of the article to delete.
+   * - Removes the corresponding JSON file from the directory.
+   * - Sets a success flash message and redirects to the admin page.
+   * @return void
+   */
   public function delete(int $id)
   {
     $filename = $this->dir . $id . '.json';
