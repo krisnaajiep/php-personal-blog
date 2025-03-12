@@ -3,7 +3,11 @@
 include 'includes/head.php';
 
 if (isset($_POST['publish'])) {
-  $article->create($_POST);
+  $article->create([
+    'article_title' => Request::post('article_title'),
+    'publishing_date' => Request::post('publishing_date'),
+    'content' => Request::post('content')
+  ]);
 }
 
 ?>
@@ -16,6 +20,7 @@ if (isset($_POST['publish'])) {
 <!-- Main Section -->
 <main>
   <form action="" method="post">
+    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
     <div class="form-input">
       <label for="article_title">Article Title</label>
       <input type="text" name="article_title" id="article_title" placeholder="Article Title" <?php if (Validator::hasValidationError('article_title')): ?> style="border-color: red;" <?php endif; ?> value="<?= $_SESSION['old_data']['article_title'] ?? ""; ?>">

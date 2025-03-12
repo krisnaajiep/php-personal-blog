@@ -7,7 +7,12 @@ if (!isset($_GET['id'])) {
 }
 
 if (isset($_POST['update'])) {
-  $article->update($_POST);
+  $article->update([
+    'id' => Request::post('id'),
+    'article_title' => Request::post('article_title'),
+    'publishing_date' => Request::post('publishing_date'),
+    'content' => Request::post('content')
+  ]);
 }
 
 ?>
@@ -20,6 +25,7 @@ if (isset($_POST['update'])) {
 <!-- Main Section -->
 <main>
   <form action="" method="post">
+    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
     <div class="form-input">
       <input type="hidden" name="id" value="<?= $data['id']; ?>">
       <label for="article_title">Article Title</label>
