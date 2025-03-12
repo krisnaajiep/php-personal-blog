@@ -58,6 +58,7 @@ How to install:
    ```
 
 4. Access the URL
+
    ```bash
    http://localhost:8000
    ```
@@ -70,10 +71,10 @@ How to install:
 
 2. Use the following credentials for authentication.
 
-```
-Username: admin
-Password: password
-```
+   ```text
+   Username: admin
+   Password: password
+   ```
 
 3. Select `+Add` to add new article.
 
